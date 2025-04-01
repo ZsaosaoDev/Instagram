@@ -6,12 +6,14 @@ import AdminPage from "../pages/AdminPage";
 import ManagerUserPage from "../pages/AdminPage/ManagerUserPage";
 import ManagerTestPage from "../pages/AdminPage/ManagerTestPage";
 import RegisterPage from "../pages/RegisterPage";
+import LoginPage from "../pages/LoginPage";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/user" element={<UserPage />} ></Route>
+      <Route path="/Login" element={<LoginPage />} ></Route>
       <Route path="/Register" element={<RegisterPage/>}></Route>
       <Route path="/admin" element={<AdminPage />}>
         <Route index element={<Navigate to="managerUser" replace />} />
