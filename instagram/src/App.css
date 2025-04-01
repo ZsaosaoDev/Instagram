@@ -7,3 +7,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.absolute_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line {
+  width: 100%;
+    flex-grow: 1;
+    height: 2px;
+    background-color: #ccc;
+}
+.h40 {
+  height: 40px;
+}
+.instargram_logo {
+    background-image: url("./assets/insLogo.png");
+    background-position: 0 0 ;
+    background-size: auto;
+    width: 175px;
+    height: 51px;
+    background-repeat: "no-repeat";
+    display: "inline-block";
+    margin-bottom: 50px;
+}

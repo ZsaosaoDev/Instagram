@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container">
                 {/* Logo và Links chính */}
                 <Link className="navbar-brand" to="/">Navbar</Link>
@@ -26,7 +26,7 @@ const Header = () => {
                     {/* Nút Login / Register bên phải */}
                     <div className="d-flex">
                         <Link className="btn btn-outline-primary me-2" to="/login">Login</Link>
-                        <Link className="btn btn-primary" to="/register">Register</Link>
+                        <Link className="btn btn-primary" to="/Register">Register</Link>
                     </div>
                 </div>
             </div>
