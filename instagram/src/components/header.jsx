@@ -25,7 +25,7 @@ const Header = () => {
 
                     {/* Nút Login / Register bên phải */}
                     <div className="d-flex">
-                        <Link className="btn btn-outline-primary me-2" to="/login">Login</Link>
+                        <Link className="btn btn-outline-primary me-2" to="/Login">Login</Link>
                         <Link className="btn btn-primary" to="/Register">Register</Link>
                     </div>
                 </div>

@@ -1,26 +1,36 @@
 import React from "react";
-import leftImage from "../assets/instagram-web-lox-image.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import googlePlay from "../assets/GGPLAY.png";
-import microsoftStore from "../assets/MSS.png";
+import GetTheApp from "../components/GetTheApp";
+import OR from "../components/OR";
+
 const RegisterPage = () => {
   return (
     <div className="container">
-      <div className="d-flex justify-content-betweent">
-        <div className="w-100">
-          <img alt="Banner" className="img-fluid w-100" src={leftImage} />
-        </div>
-        <div className="mt-5 absolute_center flex-column align-self-stretch w-100">
+      <div className="absolute_center flex-column">
+        <div className="w-100 absolute_center">
+        <div className=" rounded px-4 w-50  mt-5 absolute_center flex-column">
           <i
             data-visualcompletion="css-img"
             aria-label="Instagram"
-            className="instargram_logo"
+            className="instargram_logo mb-2"
             role="img"
           ></i>
+          <p className="w-50 fs-5 text-wrap text-center">
+            Sign up to see photos and videos from your friends.
+          </p>
+          <Link
+            className="text-decoration-none absolute_center btn btn-primary w-50 mb-2"
+            to={"/login"}
+          >
+            <FontAwesomeIcon icon={faFacebook} fontSize={20} className="mx-3" />
+            Log in with facebook
+          </Link>
+          <OR />
+
           <form className="form w-50">
-            <div className="mb-1">
+            <div className="mb-2">
               <input
                 type="email"
                 className="form-control"
@@ -29,7 +39,7 @@ const RegisterPage = () => {
                 placeholder="Phone number,username or email"
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-2">
               <input
                 type="password"
                 className="form-control"
@@ -37,38 +47,32 @@ const RegisterPage = () => {
                 placeholder="Password"
               />
             </div>
-            <button type="submit" className="btn btn-primary w-100 rounded-3">
-              Submit
+            <div className="mb-2">
+              <input
+                type="password"
+                className="form-control"
+                id="exampleInputPassword1"
+                placeholder="Password"
+              />
+            </div>
+            <div className="mb-2">
+              <input
+                type="password"
+                className="form-control"
+                id="exampleInputPassword1"
+                placeholder="Password"
+              />
+            </div>
+            <p className=" text-wrap text-center">People who use our service may have uploaded your contact information to Instagram. Learn More</p>
+            <p className="text-wrap text-center">By signing up, you agree to our Terms , Privacy Policy and Cookies Policy .</p>
+            <button type="submit" className="btn btn-primary w-100 rounded-3 mb-4">
+              Sign up
             </button>
           </form>
-          <div className="d-flex align-items-center w-50 my-3">
-            <div className="line"></div>
-            <span className="mx-3">OR</span>
-            <div className="line"></div>
-          </div>
-          <Link className="text-decoration-none absolute_center" to={"/login"}>
-            <FontAwesomeIcon icon={faFacebook} fontSize={20} className="mx-3" />
-            Log in with facebook
-          </Link>
-          <Link className="text-decoration-none text-light my-2">
-            Forgot password{" "}
-          </Link>
-          <p className="mt-5 mb-4">
-            Don't have an account?{" "}
-            <Link className="text-decoration-none fw-bold fs-6 text-primary">
-              Sign up
-            </Link>
-          </p>
-          <p className="mb-4">get the app </p>
-          <div className="absolute_center gap-2">
-            <a>
-              <img alt="google play" className="h40" src={googlePlay} />
-            </a>
-            <a>
-              <img alt="microsoft store" className="h40" src={microsoftStore} />
-            </a>
-          </div>
         </div>
+        </div>
+        <GetTheApp />
+
       </div>
     </div>
   );
